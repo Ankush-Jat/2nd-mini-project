@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: "Poppins", sans-serif; */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.page-1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #FDEEC8;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vh;
+    z-index: 0;
+    border-bottom: 1px solid black;
+}
+
+.navbar h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 60px;
+}
+
+
+
+
+
+
+
+.page-1-body {
+    padding: 0 2.5vh;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.pbody-left {
+    width: 30%;
+}
+
+
+.pbody-left h6 {
+    font-size: 80px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: transparent;
+    -webkit-text-stroke: 2px #000;
+}
+
+.pbody-left h1 {
+
+    display: block;
+    font-size: 80px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    /* margin-top: -40px; */
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-stroke: 2px #000;
+}
+
+.pbody-left h6:hover {
+    color: #000;
+    -webkit-text-stroke: 0px;
+}
+.pbody-left h1:hover {
+    color: #000;
+    -webkit-text-stroke: 0px;
+}
+
+.pbody-left p {
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 1.2px;    
+    font-weight: 400;
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.pbody-left h6:nth-child(2) {
+    margin-top: -40px;
+}
+
+
+
+
+.page-body-right {
+    width: 70%;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.page-body-right .page-cards .cards {
+    width:100vw;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -27vh;
+}
+
+.cardl {
+    position: relative;
+}
+.cardl img:nth-child(1) {
+    position: inherit;
+}
+
+.cardl img:nth-child(2){
+    position: absolute;
+    height: 65vh;
+    right: 35%;
+    top: 10%;
+    z-index: 1111;
+}
+
+
+.page-body-right .page-cards .cards:nth-child(2){
+    margin-top: 15vh;
+}
+.page-body-right .page-cards .cards:nth-child(3){
+    margin-top: 22vh;
+}
+.page-body-right .page-cards .cards:nth-child(4){
+    margin-top: 30vh;
+}
+
+
+.page-body-right .page-cards .cards:nth-child(4) .cardl{
+    top: 6%;
+}
+.page-body-right .page-cards .cards:nth-child(3) .cardl{
+    top: 14%;
+}
+.page-body-right .page-cards .cards:nth-child(2) .cardl{
+    top: 6%;
+}
+
+
+
+.cardr {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+
+.cardr h6 {
+    font-size: 80px;
+    font-weight: 200;
+    letter-spacing: -1px;
+}
+
+.cardr h1 {
+    font-size: 80px;
+    letter-spacing: -1px;
+    margin-top: -40px;
+    font-weight: 500;
+}
+
+
+
+.cardr button {
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #000;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.cardr button>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.cardr span{
+    font-size: 80px;
+    letter-spacing: -1px;
+    margin-top: -40px;
+    font-weight: 500;
+}
+
+
+
+
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #848584;
+}
