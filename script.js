@@ -1,22 +1,102 @@
+function loader() {
+  var tl = gsap.timeline();
+  tl.from(
+    ".loader .img1",
+    {
+      x: "-30vh",
+      duration: 2,
+      opacity: 0,
+      delay: 0.7,
+    },
+    "a"
+  );
+  tl.from(
+    ".loader .img2",
+    {
+      y: "-30vh",
+      duration: 2,
+      opacity: 0,
+      delay: 0.7,
+    },
+    "a"
+  );
+  tl.from(
+    ".loader .img3",
+    {
+      x: "30vh",
+      duration: 2,
+      opacity: 0,
+      delay: 0.7,
+    },
+    "a"
+  );
+  tl.from(".loader h1 span", {
+    delay: 1,
+    y: "-20vh",
+    stagger: 0.3,
+    opacity: 0,
+  });
+  tl.to(
+    ".loader .img",
+    {
+      delay: 0.7,
+      y: "-50vh",
+      opacity: 0,
+    },
+    "at"
+  );
+  tl.to(
+    ".loader h1",
+    {
+      delay: "0.7",
+      y: "-20vh",
+      opacity: 0,
+    },
+    "at"
+  );
+  tl.to(".loader", {
+    display: "none",
+    // opacity:0
+  });
+  tl.from(".wrapper", {
+    display: "block",
+  });
+  tl.from(".cards", {
+    opacity: 0,
+    y: -20,
+    duration: 0.5,
+    stagger: 0.3,
+  });
+}
+loader();
+
+
+
+
+// ------ lenis
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  direction: "vertical",
+  gestureDirection: "vertical",
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+});
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+lenis.on("scroll", ScrollTrigger.update);
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
 Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
-
-// Shery.hoverWithMediaCircle(".hover", {images: ["https://cdn.prod.website-files.com/6530f0423a815673c177472f/65b02cc301f229f77d4f38eb_Rectangle%20354.png", "https://cdn.prod.website-files.com/6530f0423a815673c177472f/65b02ceff5619c8b2f19a2bf_Rectangle%20356.png","https://cdn.prod.website-files.com/6530f0423a815673c177472f/65cc92c52f54e9dbba2a76cf_AdobeStock_51744816.jpeg"]});
-
-// custom cursor
-
-// var main = document.querySelector(".wrapper");
-// var cursor = document.querySelector(".cursor");
-
-// main.addEventListener("mousemove", function(dets){
-//     gsap.to(cursor, {
-//         x:dets.x,
-//         y:dets.y,
-//         duration:0.3,
-//         ease:"back.out"
-//     })
-// })
-
 
 
 // ---------- background change
@@ -72,29 +152,25 @@ var bgChange = function () {
     backgroundColor: "#ceffb7",
   });
 };
-
 bgChange();
+
 
 
 // loading nomber
 
-var loadnum = function(){
-    var timer = document.querySelector(".no span");
-var grow = 0;
+var loadnum = function () {
+  var timer = document.querySelector(".no span");
+  var grow = 0;
 
-setInterval(function () {
-  if (grow < 196) {
-    timer.innerHTML = grow++;
-  } else {
-    timer.innerHTML = grow;
-  }
-}, 30);
-
-}
+  setInterval(function () {
+    if (grow < 196) {
+      timer.innerHTML = grow++;
+    } else {
+      timer.innerHTML = grow;
+    }
+  }, 30);
+};
 loadnum();
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   var tl = gsap.timeline({ paused: true });
@@ -208,35 +284,54 @@ string.addEventListener("mouseleave", function () {
 
 
 
-
 // bottle animation
 
-const bottleAnimate = function(){
-    var tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".page3",
-          start: "0% 95%",
-          end: "70% 50%",
-          scrub: true,
-        },
-      });
-      
-      tl.to(".p2-bottle", {
-        top: "230%",
-      });
-      
-      var tl2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".page5",
-          start: "0% 95%",
-          end: "70% 50%",
-          scrub: true,
-          // markers: true,
-        },
-      });
-      
-      tl2.to(".p2-bottle", {
-        top: "485%",
-      });
-}
+const bottleAnimate = function () {
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page3",
+      start: "0% 95%",
+      end: "70% 50%",
+      scrub: true,
+    },
+  });
+
+  tl.to(".p2-bottle", {
+    top: "230%",
+  });
+
+  var tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page5",
+      start: "0% 95%",
+      end: "70% 50%",
+      scrub: true,
+      // markers: true,
+    },
+  });
+
+  tl2.to(".p2-bottle", {
+    top: "485%",
+  });
+};
 bottleAnimate();
+
+function page4Animation() {
+  let eleCcon = document.querySelector("#elem-container");
+  let fixed = document.querySelector("#fixed-img");
+  eleCcon.addEventListener("mouseenter", () => {
+    fixed.style.display = "block";
+  });
+  eleCcon.addEventListener("mouseleave", () => {
+    fixed.style.display = "none";
+  });
+
+  let elems = document.querySelectorAll("#elem");
+  elems.forEach(function (e) {
+    e.addEventListener("mouseenter", function () {
+      let image = e.getAttribute("data-image");
+      fixed.style.backgroundImage = `url(${image})`;
+    });
+  });
+}
+page4Animation();

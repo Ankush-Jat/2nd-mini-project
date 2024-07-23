@@ -4,15 +4,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>PULLE Website</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+  <link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme:dark)"
+    href="https://cdn.prod.website-files.com/6530f0423a815673c177472f/66798be351a391ad748b19dd_favicon-32x32_w.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
 
+  <div class="loader">
+    <div class="img">
+      <img class="img1"
+        src="https://uploads-ssl.webflow.com/6530f0423a815673c177472f/65835f86f09bcac115d5b406_PULLE_Rhabarber_Schorle_front.png"
+        alt="">
+      <img class="img2"
+        src="https://uploads-ssl.webflow.com/6530f0423a815673c177472f/6662cc3954137412436afb45_front_FINAL_apfel-holunder_3.png"
+        alt="">
+      <img class="img3"
+        src="https://uploads-ssl.webflow.com/6530f0423a815673c177472f/65835f86914cd1e633f525d5_PULLE_Zitrone_Limo_front.png"
+        alt="">
+    </div>
+    <div class="content">
+      <h1><span>PULLE .</span><span>Really .</span><span>Good .</span></h1>
+    </div>
+    <div class=" content2 content">
+      <h1><span>Made By Coding Carpenters-  Ankush Jat,   Mayank  Sarathe</span></h1>
+    </div>
+  </div>
+
+
+  <div id="fixed-img"></div>
   <div class="wrapper">
     <!-------------- page1------------- -->
     <div class="page-1">
@@ -54,7 +79,7 @@
       </div>
       <div class="page-1-body">
         <div class="pbody-left">
-          <h6 class="hover">REALLY.</h6>
+          <h6 class="hover">REALLY</h6>
           <h6 class="hover">GOOD.</h6>
           <h1 class="hover">PULLE.</h1>
           <p>Our philosophy is simple - us
@@ -80,7 +105,7 @@
               <div class="cardr">
                 <h6>Soda</h6>
                 <h1>Lemon</h1>
-                <button><a href="#">More Details</a></button>
+                <button class="animate-btn"><a href="#">More Details</a></button>
               </div>
             </div>
             <div class="cards cards2">
@@ -95,7 +120,7 @@
               <div class="cardr">
                 <h6>Lemonade</h6>
                 <h1>Orange</h1>
-                <button><a href="#">More Details</a></button>
+                <button class="animate-btn"><a href="#">More Details</a></button>
               </div>
             </div>
             <div class="cards cards3">
@@ -110,7 +135,7 @@
               <div class="cardr">
                 <h6>Spritzer</h6>
                 <span>Appel</span>
-                <button><a href="#">More Details</a></button>
+                <button class="animate-btn"><a href="#">More Details</a></button>
               </div>
             </div>
             <div class="cards cards4 end">
@@ -125,8 +150,8 @@
               <div class="cardr">
                 <h6>Spritzer</h6>
                 <h1>Appel</h1>
-                <span style="font-size: 50px; padding-top: 1px;">ElderBerry</span>
-                <button><a href="#">More Details</a></button>
+                <span style="font-size: 50px; padding-top: 20px;">ElderBerry</span>
+                <button class="animate-btn"><a href="#">More Details</a></button>
               </div>
             </div>
           </div>
@@ -142,7 +167,8 @@
         <p class="p2-text">Selection</p>
         <!-- <img class="animation-bottle2" src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6551f2832e2ea32fb46f0873_flasche_weiss.png" alt=""> -->
       </div>
-      <div class="p2-img"> <img
+      <div class="p2-img">
+        <img
           src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6571cc063179c94d2eaaedbd_Group_apple-p-500.png"
           alt="">
 
@@ -168,7 +194,7 @@
             fascinating world of PULLE, where taste, environmental protection and social commitment go hand in hand.
           </p>
         </div>
-        <div class="btn">To The Blog</div>
+        <div class="p3-btn animate-btn">To The Blog</div>
       </div>
       <div class="page3-box2  swiper">
         <div class="swiper-wrapper">
@@ -225,19 +251,67 @@
       </div>
 
     </div>
-
-
-    <!-- -----------page4-------------- -->
-    <!-- <div class="page4">
-  
-  </div> -->
-
     <!-- -----------page5---------------- -->
     <div class="page5">
-
+      <div class="p5-content">
+        <p>Mehrweg- <br>konzept</p>
+        <p>Bei PULLE trinken wir aus Glas! Unsere Glasflaschen sind umweltfreundlich und können bis zu 50-mal
+          wiederverwendet werden, ohne an Qualität zu verlieren. Die weißen Laufränder auf unseren Flaschen sind keine
+          unschönen Zufälle - sie sind der sichtbare Beweis für unsere konsequente Mehrwegnutzung und unser Engagement
+          für eine nachhaltigere Zukunft. Sei auch du ein Teil davon!</p>
+      </div>
       <img class=""
         src="https://uploads-ssl.webflow.com/6530f0423a815673c177472f/6581774d6dd9ffc5d4c05118_leere_kiste.png" alt="">
     </div>
+
+    <!-- -----------page4-------------- -->
+    <div class="page4">
+      <div id="elem-container">
+        <div id="elem1">
+          <div id="elem"
+            data-image="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6596dcf8657acc7a3f69492d_pulle_infinity_rhabarber.jpg">
+            <div class="overlay"></div>
+            <h2>Schorle
+              Rhabarber</h2>
+          </div>
+          <div id="elem"
+            data-image="https://cdn.prod.website-files.com/6530f0423a815673c177472f/664f4e0de59109a26dd5608d_pulle_infinity_mate.jpg">
+            <div class="overlay overlay1"></div>
+            <h2>Mate
+              Pur</h2>
+          </div>
+          <div id="elem"
+            data-image="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6596dcfab8d1d75c8584e9d9_pulle_infinity_wasser_still-p-500.jpg">
+            <div class="overlay overlay2"></div>
+            <h2>Wasse Still</h2>
+          </div>
+          <div id="elem"
+            data-image="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6596dcf9425b6fb5045e47d1_pulle_infinity_orange-p-500.jpg">
+            <div class="overlay overlay3"></div>
+            <h2>Limo Orange</h2>
+          </div>
+          <div id="elem"
+            data-image="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6596dcf9b5a029fd69927521_pulle_infinity_wasser_medium.jpg">
+            <div class="overlay overlay4"></div>
+            <h2>Wasser Medium</h2>
+          </div>
+          <div id="elem"
+            data-image="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6596dcfa9c3ae9a9192cc086_pulle_infinity_zitrone.jpg">
+            <div class="overlay overlay5"></div>
+            <h2>Limo Zitrone</h2>
+          </div>
+          <div id="elem"
+            data-image="https://cdn.prod.website-files.com/6530f0423a815673c177472f/664f4e0306c2806a6b0a9ee7_pulle_infinity_apfel-holunder_neu-p-500.jpg">
+            <div class="overlay overlay6"></div>
+            <h2>Schorle
+              Apfel-Holunder</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
 
     <!-- ----------page6---------------- -->
     <div class="page6">
@@ -303,7 +377,7 @@
             </div>
             <div class="slide">
               <img
-                src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6596dcfa9c3ae9a9192cc086_pulle_infinity_zitrone-p-500.jpg"
+                src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6596dcfab8d1d75c8584e9d9_pulle_infinity_wasser_still.jpg"
                 alt="">
             </div>
 
@@ -611,9 +685,9 @@
             <img
               src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6551456dd6f9d81d70ffea35_icon_facebook.png"><img
               src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/655145758a5246d738b01565_icon_instagram.png"><img
-              src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/655145758a5246d738b01565_icon_instagram.png">
+              src="https://cdn.prod.website-files.com/6530f0423a815673c177472f/6551457ede5933fd68c93d09_icon_tiktok.png">
           </div>
-          <div>
+          <div>png
             <p>imprint</p>
             <p>data protection
             </p>
@@ -638,6 +712,7 @@
   </div>
 
 
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
