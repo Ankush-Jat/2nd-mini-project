@@ -18,14 +18,14 @@
 html,
 body {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
 }
 
 /* -------------------------------- */
 
 .loader {
-  background-color: #ffffff;
+  background-color: #fdeec8;
   height: 100vh;
   width: 101vw;
   position: fixed;
@@ -60,7 +60,7 @@ body {
   margin-top: 4vh;
 }
 .loader .content2 span {
-  font-size: 3vh;
+  font-size: 5vh;
   font-family: "Indie Flower", cursive;
   font-weight: 700;
 }
@@ -591,6 +591,9 @@ body {
   z-index: 999;
   /* margin-left: 15rem; */
 }
+.page5>p{
+  display: none;
+}
 .p5-content {
   width: 37%;
   display: flex;
@@ -785,6 +788,7 @@ body {
   border-radius: 10px;
   width: 20vw;
   padding: 0.75rem;
+  flex-wrap: nowrap;
 }
 
 /* ---------page8---------- */
@@ -886,8 +890,9 @@ body {
 }
 .p8-mail img {
   height: 30px;
-  border-radius: 40px;
-  padding: 1px;
+  width: 30px;
+  border-radius: 10px;
+  padding: 3px;
 }
 .p8-mail img:hover {
   transform: scale(1.5); /* Increases size by 10% instead of 2000% */

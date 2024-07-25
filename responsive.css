@@ -63,13 +63,46 @@
   .page-cards .cards4 .cardr button {
     display: none;
   }
-
+  .slider1{
+    height: 70%;
+  }
+  .slider1 .slide img {
+    height: 250px;
+    width: 150px;
+  }
+  .p5-content{
+    width: 31%;
+  }
 }
 
 @media only screen and (max-width:768px) {
   /* .page-cards .cards4 .cardr h1 {
     font-size: 20px;
   } */
+  .slider1{
+    height: 90%;
+    margin-left: 10px;
+  }
+
+  .p7-sec1 .slider1:nth-child(3){
+    display: none;
+  }
+  .slider1 .slide img {
+    height: 250px;
+    width: 150px;
+  }
+  .p7-sec2-content button {
+    font-size: 12px;
+    /* text-wrap: nowrap; */
+    width: 22vw;
+  }
+  .p2-bottle {
+    height: 50vh;
+  }
+  .p2-img {
+    position: relative;
+  }
+
 }
 
 
@@ -92,6 +125,16 @@
     justify-content: center;
     margin-top: -15vh;
   }
+  .page7{
+    height: 80vh;
+  }
+  .p7-sec1 .slider1 img{
+    margin-left: 470px;
+  }
+  .slider1 .slide img {
+    height: 220px;
+    width: 130px;
+  }
 }
 
 
@@ -103,10 +146,51 @@
     text-align: center;
     margin: auto;
     margin-top: 6vh;
-    margin-left: 5vh;
+    margin-left: 3vh;
+    margin-bottom: 3vw;
   }
   .loader h1 span {
     font-size: 5vh;
+  }
+  .p7-sec1 .slider1:nth-child(3){
+    display: block;
+  }
+  .page5 img {
+    height: 40vh;
+    z-index: 999;
+    /* margin-left: 15rem; */
+  }
+  .page5{
+    flex-direction: column;
+  }
+  .p5-content{
+    display: none;
+  }
+  .page5>p{
+    display: block;
+  }
+  .page3{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+  .p3-box1{
+    margin-top: 5vh;
+    width: 90%;
+  }
+  .p3-text {
+    font-size: 7vw;
+    font-weight: 300;
+  }
+  .p3-para {
+    font-size: 2vw;
+  }
+  .p3-btn {
+    width: 30vw;
+    text-align: center;
+  }
+  .page3-box2{
+    width: 65%;
   }
 }
 

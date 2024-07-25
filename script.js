@@ -61,12 +61,37 @@ function loader() {
   tl.from(".wrapper", {
     display: "block",
   });
+  tl.from(".navbar h1", {
+    opacity: 0,
+    y: -20,
+    stagger: 0.3,
+  });
   tl.from(".cards", {
     opacity: 0,
     y: -20,
     duration: 0.5,
     stagger: 0.3,
-  });
+  },"ab");
+  tl.from(".pbody-left h6", {
+    opacity: 0,
+    x: -50,
+    duration: 0.5,
+    stagger: 0.1,
+  },"abc");
+  tl.from(".pbody-left h1", {
+    opacity: 0,
+    x: -50,
+    stagger:1,
+    duration: 0.5,
+    stagger: 0.3,
+  },"abc");
+  tl.from(".pbody-left p", {
+    opacity: 0,
+    x: -50,
+    stagger:1,
+    duration: 0.5,
+    stagger: 0.3,
+  },"abc");
 }
 loader();
 
@@ -245,8 +270,21 @@ tl.from(".cards", {
   y: -20,
   delay: 1,
   duration: 1,
-  stagger: 0.3,
+  delay: 0.5,
 });
+tl.from("pbody-left h1", {
+  opacity: 0,
+  y: -20,
+  duration: 0.5,
+  delay: 0.5,
+})
+  .from("pbody-left h6", {
+    opacity: 0,
+    y: -20,
+    duration: 0.5,
+    stagger: 0.3,
+  })
+
 
 var swiper = new Swiper(".swiper", {
   effect: "cards",
@@ -260,27 +298,31 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
-var Path = "M -500 100 Q 1500 100 3500 100";
-var finalPath = "M -500 100 Q 1500 100 3500 100";
 
+var initialPath = "M -500 100 Q 1500 100 3500 100";
 var string = document.querySelector(".string");
+var path = string.querySelector("path");
 
-string.addEventListener("mousemove", function (dets) {
-  var path = `M -500 100 Q 1500 ${dets.clientY} 3500 100`;
-  gsap.to("svg path", {
-    attr: { d: path },
+string.addEventListener("mousemove", function (event) {
+  var rect = string.getBoundingClientRect();
+  var y = event.clientY - rect.top; 
+  var newPath = `M -500 100 Q 1500 ${y} 3500 100`;
+  
+  gsap.to(path, {
+    attr: { d: newPath },
     duration: 0.3,
     ease: "power3.out",
   });
 });
 
 string.addEventListener("mouseleave", function () {
-  gsap.to("svg path", {
-    attr: { d: finalPath },
+  gsap.to(path, {
+    attr: { d: initialPath },
     duration: 1.5,
     ease: "elastic.out(1,0.1)",
   });
 });
+
 
 
 
