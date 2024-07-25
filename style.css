@@ -60,7 +60,7 @@ body {
   margin-top: 4vh;
 }
 .loader .content2 span {
-  font-size: 5vh;
+  font-size: 4vh;
   font-family: "Indie Flower", cursive;
   font-weight: 700;
 }
@@ -230,6 +230,11 @@ body {
   align-items: center;
 }
 
+/* --------- */
+
+.hide-container {
+  display: none;
+}
 .page-cards {
   width: 100%;
   height: 100%;
@@ -610,7 +615,12 @@ body {
   line-height: 3vw;
 }
 
+
+
 /* --------page6--------- */
+
+
+
 .page6 {
   width: 100%;
   height: 100vh;
@@ -621,7 +631,6 @@ body {
   justify-content: center;
   gap: 3.5vw;
   padding: 1vw;
-  /* margin-right: 0.2rem; */
   overflow: hidden;
   position: relative;
 }
@@ -853,7 +862,6 @@ body {
 }
 .mail {
   display: flex;
-  /* flex-direction: row; */
   gap: 6rem;
 }
 .p8-img img {
@@ -861,7 +869,6 @@ body {
 }
 .string {
   margin-top: -6rem;
-  /* background-color: #bb0f0f; */
 }
 .p8-sec2 {
   position: absolute;
